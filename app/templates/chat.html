@@ -1,0 +1,6 @@
+<section ng-controller="ChatCtrl as chat">
+        <h1>Bloc Chat</h1>
+        <h4 ng-repeat="room in chat.rooms track by $index">
+        Room {{ ($index + 1) }}
+        </h4>
+</section>

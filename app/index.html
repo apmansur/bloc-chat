@@ -8,30 +8,36 @@
 </head>
 
 <body>
-    <script src="/scripts/app.js"></script>
-    
+
+    <ui-view></ui-view>
+
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
 
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-    
+
     <!-- FireBase -->
 
     <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyA3d2ZO4jMFzuLPcAun8fn5YfF3pbQ2iQ4",
-            authDomain: "bloc-frontend.firebaseapp.com",
-            databaseURL: "https://bloc-frontend.firebaseio.com",
-            projectId: "bloc-frontend",
-            storageBucket: "bloc-frontend.appspot.com",
-            messagingSenderId: "570586954629"
+            apiKey: "AIzaSyCahq9YSyCCTLKY27nQA5LAOH2ci7nln-0",
+            authDomain: "bloc-chat-ba37c.firebaseapp.com",
+            databaseURL: "https://bloc-chat-ba37c.firebaseio.com",
+            projectId: "bloc-chat-ba37c",
+            storageBucket: "bloc-chat-ba37c.appspot.com",
+            messagingSenderId: "132116053355"
         };
         firebase.initializeApp(config);
 
     </script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/ChatCtrl.js"></script>
 </body>
 
 </html>
