@@ -1,7 +1,7 @@
 (function() {
     function ModalInstanceCtrl($uibModalInstance) {
        this.accept = function() {
-            this.room = {$index : name };
+            this.room = {name: '' };
             $uibModalInstance.close(this.name);
         };
       
