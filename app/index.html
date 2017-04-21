@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css“>
 </head>
 
 <body>
@@ -35,10 +36,16 @@
         firebase.initializeApp(config);
 
     </script>
-
+    <!--Jquery-->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/controllers/ChatCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
 </body>
 
 </html>

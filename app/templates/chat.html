@@ -4,5 +4,9 @@
         <h4 ng-repeat="room in chat.rooms track by $index">
             Room {{ ($index + 1) }}
         </h4>
+        <div ng-controller="ModalCtrl as modal">
+            <button ng-click="modal.open()" class="btn"> add new room </button>
+        </div>
+        
     </div>
 </section>
