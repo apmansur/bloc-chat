@@ -2,11 +2,28 @@
     <div class="navbar">
         <h1>Bloc Chat</h1>
         <h4 ng-repeat="room in chat.rooms track by $index">
-            Room {{ ($index + 1) }}
+            <div ng-click="chat.setRoom" id= "{{$index}}" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">Room {{ ($index + 1) }}</div>
         </h4>
         <div ng-controller="ModalCtrl as modal">
             <button ng-click="modal.open()" class="btn"> add new room </button>
         </div>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2>{{ currentRoom.$value }}</h2>
+        <table class="table">
+            <tr ng-repeat="message in messages track by $index" class="row" ng-class="{oddRow: $odd}">
+                <td class="username">
+                    username
+                    <br/>
+                    content
+                </td>
+                <td class="sentAt">time sent</td>
+            </tr>
+            
+        </table> 
         
     </div>
 </section>
