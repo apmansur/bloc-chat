@@ -1,5 +1,5 @@
  (function () {
-     function ChatCtrl(Room) {
+     function ChatCtrl(Room, Message, $scope) {
          this.rooms = Room.all;
 
 
@@ -12,5 +12,5 @@
 
      angular
          .module('blocChat')
-         .controller('ChatCtrl', ['Room','Messages','$scope' ChatCtrl]);
+         .controller('ChatCtrl', ['Room','Message','$scope', ChatCtrl]);
  })();
