@@ -16,11 +16,11 @@
         <table class="table">
             <tr ng-repeat="message in messages track by $index" class="row" ng-class="{oddRow: $odd}">
                 <td class="username">
-                    username
+                    {{message.username}}
                     <br/>
-                    content
+                    {{message.content}}
                 </td>
-                <td class="sentAt">time sent</td>
+                <td class="sentAt">{{message.sentAt}}</td>
             </tr>
             
         </table> 
