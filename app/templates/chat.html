@@ -2,7 +2,7 @@
     <div class="navbar">
         <h1>Bloc Chat</h1>
         <h4 ng-repeat="room in chat.rooms track by $index">
-            <div ng-click="chat.setRoom" id= "{{$index}}" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">Room {{ ($index + 1) }}</div>
+            <div ng-click="chat.setRoom(room)" id= "{{$index}}" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">{{room.$value}}</div>
         </h4>
         <div ng-controller="ModalCtrl as modal">
             <button ng-click="modal.open()" class="btn"> add new room </button>
