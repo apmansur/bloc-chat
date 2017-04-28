@@ -19,7 +19,7 @@
          if (!currentUser || currentUser === '') {
              var modalInstance = $uibModal.open({
                  templateUrl: '/templates/username.html',
-                 controller: 'CookieInstanceCtrl',
+                 controller: 'CookiesInstanceCtrl',
                  controllerAs: 'modalUser'
              });
 

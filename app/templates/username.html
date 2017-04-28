@@ -4,16 +4,15 @@
     </div>
 
     <div class="modal-body">
-        <form ng-submit="modal.accept()">
+        <form name= "Username" ng-submit="accept(Username.username.$valid)" novalidate>
             <label for="username">username entered will appear in chat</label>
             <div class="input-group">
-                <input type="text" class="form-control" ng-model="modalUser.username" title="username" placeholder="Your username here" autofocus>
-                <h4>{{ modalUser.name }}</h4>
+                <input type="text" class="form-control" ng-model="username" name="username" placeholder="Your username here" autofocus required>
             </div>
         </form>
 
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="modal.accept()">Submit</button>
+        <button class="btn btn-primary" type="button" ng-click="accept()">Submit</button>
     </div>
 </div>
