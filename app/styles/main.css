@@ -1,26 +1,31 @@
 html {
-    
+    background-image:url("../images/space.jpeg");
     font-size: 100%;
 }
 
-body {
-    font-family: 'Arial';
+ui-view {
+    font-family: 'Share Tech Mono', monospace, serif;
     margin: 0;
     padding: 0;
 }
 
 .navbar {
     height: 100%;
-    width: 25%;
-    background-color: grey;
+    width: 20%;
+    background-color: darkcyan;
     padding: 2rem;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
+    color:white;
 }
 
 .container{
-    float:right;
-    
+    padding-left: 30%;   
+}
+
+textarea {
+  width:100%;
+  padding:25%;
 }

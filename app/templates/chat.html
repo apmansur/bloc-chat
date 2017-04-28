@@ -1,29 +1,40 @@
 <section ng-controller="ChatCtrl as chat">
-    <div class="navbar">
+    <div class="navbar container-fluid">
         <h1>Bloc Chat</h1>
         <h4 ng-repeat="room in chat.rooms track by $index">
-            <div ng-click="chat.setRoom(room)" id= "{{$index}}" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">{{room.$value}}</div>
+            <div ng-click="chat.setRoom(room)" id="{{$index}}" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">{{room.$value}}</div>
         </h4>
         <div ng-controller="ModalCtrl as modal">
             <button ng-click="modal.open()" class="btn"> add new room </button>
         </div>
-
+         <img src="../images/greeting.png" height="300px" width="300px" alt="greeting">
     </div>
-</section>
-<section>
+
+
     <div class="container">
         <h2>{{ currentRoom.$value }}</h2>
         <table class="table">
             <tr ng-repeat="message in messages track by $index" class="row" ng-class="{oddRow: $odd}">
                 <td class="username">
                     {{message.username}}
-                    <br/>
-                    {{message.content}}
+                    <br/> {{message.content}}
                 </td>
                 <td class="sentAt">{{message.sentAt}}</td>
             </tr>
-            
-        </table> 
-        
+
+        </table>
+
+    </div>
+
+
+    <div class="input-bar container">
+        <form ng-submit="chat.send(chat.message, currentRoom)">
+            <div class="input-group animated">
+                <textarea type="text" class="form-control finderBar container-fluid" ng-model="chat.message" placeholder="Type your message here.." autofocus></textarea>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="chat.send(chat.message, currentRoom)">Send</button>
+                </span>
+            </div>
+        </form>
     </div>
 </section>
