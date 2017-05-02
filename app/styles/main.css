@@ -1,5 +1,5 @@
 html {
-    background-image:url("../images/space.jpeg");
+    background-image: url("../images/space.jpeg");
     font-size: 100%;
 }
 
@@ -18,14 +18,26 @@ ui-view {
     z-index: 1;
     top: 0;
     left: 0;
-    color:white;
+    color: white;
 }
 
-.container{
-    padding-left: 30%;   
+.container {
+    padding-left: 30%;
 }
 
 textarea {
-  width:100%;
-  padding:25%;
+    padding: 25%;
+    min-width: 910px;
+}
+
+.odd {
+    color: black;
+}
+
+.even {
+    color: darkmagenta;
+}
+
+#greeting {
+    padding-top: 20em;
 }

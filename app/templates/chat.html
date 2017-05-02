@@ -7,14 +7,14 @@
         <div ng-controller="ModalCtrl as modal">
             <button ng-click="modal.open()" class="btn"> add new room </button>
         </div>
-         <img src="../images/greeting.png" height="300px" width="300px" alt="greeting">
+         <img src="../assets/greeting.png" id="greeting" height="239px" width="230px" alt="greeting">
     </div>
 
 
     <div class="container">
         <h2>{{ currentRoom.$value }}</h2>
         <table class="table">
-            <tr ng-repeat="message in messages track by $index" class="row" ng-class="{oddRow: $odd}">
+            <tr ng-repeat="message in messages track by $index" class="row" ng-class-odd="'odd'" ng-class-even="'even'">
                 <td class="username">
                     {{message.username}}
                     <br/> {{message.content}}
@@ -30,7 +30,7 @@
     <div class="input-bar container">
         <form ng-submit="chat.send(chat.message, currentRoom)">
             <div class="input-group animated">
-                <textarea type="text" class="form-control finderBar container-fluid" ng-model="chat.message" placeholder="Type your message here.." autofocus></textarea>
+                <textarea type="text" rows="5" cols="300" class="form-control finderBar container-fluid" ng-model="chat.message" placeholder="Type your message here.." autofocus></textarea>
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" ng-click="chat.send(chat.message, currentRoom)">Send</button>
                 </span>
